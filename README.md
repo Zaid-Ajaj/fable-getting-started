@@ -1,5 +1,9 @@
 # Fable Getting Started
 
+This is basically the simplest Fable client app you can get.
+It just writes `Hello World` to the console.
+After building it you will find a html and a js file in the `public` folder as build result.
+
 Requirements
 
  - [.NET Core](https://www.microsoft.com/net/download) 2.1+
@@ -7,11 +11,13 @@ Requirements
  - [Node.js](https://nodejs.org/en/) 10.0+ 
 
 ### Windows
-Compiling the project
+In the main folder runn the following commands.
+
+for compiling the project
 ```
 build
 ```
-Compiling and the project and watching for file changes
+for compiling and the project and watching for file changes
 ```
 build Watch
 ```
