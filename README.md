@@ -11,7 +11,7 @@ Requirements
  - [Node.js](https://nodejs.org/en/) 10.0+ 
 
 ### Windows
-In the main folder runn the following commands.
+In the main folder run the following commands.
 
 for compiling the project
 ```
