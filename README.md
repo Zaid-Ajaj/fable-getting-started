@@ -23,7 +23,7 @@ build Watch
 ```
 
 ### Non-Windows
-Compiling the project (for )
+Compiling the project
 ```
 ./build.sh 
 ```
