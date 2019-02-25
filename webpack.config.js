@@ -1,46 +1,24 @@
+// Note this only includes basic configuration for development mode.
+// For a more comprehensive configuration check:
+// https://github.com/fable-compiler/webpack-config-template
+
 var path = require("path");
 
-var babelOptions = {
-  presets: [
-    ["@babel/preset-env", {
-        "modules": false,
-        "useBuiltIns": "entry",
-    }]
-  ]
-};
-
-module.exports = function (evn, argv) {
- var mode = argv.mode || "development";
- var isProduction = mode === "production";
- console.log("Webpack mode: " + mode);
-
- return {
-  mode: mode,
-  devtool: isProduction ? false : "eval-source-map",
-  entry: './src/App.fsproj',
-  output: {
-    filename: 'bundle.js',
-    path: path.join(__dirname, './public'),
-  },
-  devServer: {
-    contentBase: './public',
-    port: 8080
-  },
-  module: {
-    rules: [
-      {
-        test: /\.fs(x|proj)?$/,
-        use: "fable-loader"
-      },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: babelOptions
-        },
-      }
-    ]
-  }
- };
+module.exports = {
+    mode: "development",
+    entry: "./src/App.fsproj",
+    output: {
+        path: path.join(__dirname, "./public"),
+        filename: "bundle.js",
+    },
+    devServer: {
+        contentBase: "./public",
+        port: 8080,
+    },
+    module: {
+        rules: [{
+            test: /\.fs(x|proj)?$/,
+            use: "fable-loader"
+        }]
+    }
 }
