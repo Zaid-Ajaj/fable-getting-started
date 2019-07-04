@@ -4,6 +4,10 @@
 
 var path = require("path");
 
+// If we're running the webpack-dev-server, assume we're in development mode
+var isProduction = !process.argv.find(v => v.indexOf('webpack-dev-server') !== -1);
+console.log('Bundling for ' + (isProduction ? 'production' : 'development') + '...');
+
 module.exports = {
     mode: "development",
     entry: "./src/App.fsproj",
@@ -15,6 +19,7 @@ module.exports = {
         contentBase: "./public",
         port: 8080,
     },
+    devtool: isProduction ? 'source-map' : 'eval-source-map',
     module: {
         rules: [{
             test: /\.fs(x|proj)?$/,
