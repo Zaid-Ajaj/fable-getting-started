@@ -15,11 +15,11 @@ To compile the project, run the following commands
 npm install
 npm run build
 ```
-`npm install` will install dependencies from [npm](https://www.npmjs.com/) which is the Node.js equivalent of dotnet's Nuget registry. These dependencies include the Fable compiler itself as it is distributed to npm to make compilation worflow as simple as possible.
+`npm install` will install dependencies from [npm](https://www.npmjs.com/) which is the Node.js equivalent of dotnet's Nuget registry. These dependencies include the Fable compiler itself as it is distributed to npm to make compilation workflow as simple as possible.
 
 `npm run build` will then start building the project by invoking [webpack](https://webpack.js.org/) which is responsible of orchestrating the compilation process.
 
-After `npm run build` finished running, the generated javascript will be bundled in a single file called `bundle.js` located in the `public` directory along with the `index.html` page that references that script file.
+After `npm run build` finished running, the generated javascript will be bundled in a single file called `main.js` located in the `dist` directory along with an existing `index.html` page that references that script file.
 
 ### Development mode
 
