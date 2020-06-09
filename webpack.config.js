@@ -1,7 +1,7 @@
 var path = require("path");
 
 module.exports = {
-    mode: "none",
+    mode: "development",
     entry: "./src/App.fsproj",
     devServer: {
         contentBase: path.join(__dirname, "./dist")
