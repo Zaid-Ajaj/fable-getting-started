@@ -4,12 +4,17 @@ This is the simplest Fable application you can make: it is a frontend web applic
 
 Requirements
 
- - [.NET Core](https://www.microsoft.com/net/download) 2.2+
- - [Node.js](https://nodejs.org/en/) 10.0+
+ - [.NET Core](https://dotnet.microsoft.com/en-us/download) v6.0 or later
+ - [Node.js](https://nodejs.org/en/) runtime
 
 ### Installation
 
-To compile the project, run the following commands
+To compile the project, first you need to restore dotnet tools which bring it the Fable compiler
+```
+dotnet tool restore
+```
+
+Then run the following commands to install Node.js dependencies such as webpack and bundle the application
 
 ```bash
 npm install
@@ -17,7 +22,7 @@ npm run build
 ```
 `npm install` will install dependencies from [npm](https://www.npmjs.com/) which is the Node.js equivalent of dotnet's Nuget registry. These dependencies include the Fable compiler itself as it is distributed to npm to make compilation workflow as simple as possible.
 
-`npm run build` will then start building the project by invoking [webpack](https://webpack.js.org/) which is responsible of orchestrating the compilation process.
+`npm run build` is an alies for "compile with Fable, then bundle with webpack" 
 
 After `npm run build` finished running, the generated javascript will be bundled in a single file called `main.js` located in the `dist` directory along with an existing `index.html` page that references that script file.
 
