@@ -2,9 +2,11 @@
 
 This is the simplest Fable application you can make: it is a frontend web application with an empty page that writes `Hello from Fable` to the console.
 
+This template is _not_ for production use and is only used to demonstrate Fable features in [The Elmish Book](https://github.com/Zaid-Ajaj/the-elmish-book)
+
 Requirements
 
- - [.NET Core](https://dotnet.microsoft.com/en-us/download) v6.0 or later
+ - [dotnet SDK](https://dotnet.microsoft.com/en-us/download) v6.0 or later
  - [Node.js](https://nodejs.org/en/) runtime
 
 ### Installation
