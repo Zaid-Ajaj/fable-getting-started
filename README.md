@@ -7,6 +7,21 @@ Requirements
  - [.NET Core](https://www.microsoft.com/net/download) 2.2+
  - [Node.js](https://nodejs.org/en/) 10.0+
 
+> **Fable 3 only supports up to .NET 6.**
+>
+> If you are using .NET 7 or later you will need to add a `global.json` file to your project and install the [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0).
+> 
+> Example:
+> 
+> ```bash
+> {
+>   "sdk": {
+>     "version": "6.0.0",
+>     "rollForward": "latestMinor"
+>   }
+> }
+> ```
+
 ### Installation
 
 To compile the project, run the following commands
