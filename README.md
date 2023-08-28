@@ -13,7 +13,7 @@ Requirements
 > 
 > Example:
 > 
-> ```bash
+> ```json
 > {
 >   "sdk": {
 >     "version": "6.0.0",
